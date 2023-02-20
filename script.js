@@ -3,10 +3,9 @@ const width = document.querySelector('#width');
 const height = document.querySelector('#height');
 let liczba = 0;
 
-
 function teleport(){
-    let x = Math.floor(Math.random()*width.value +1);
-    let y = Math.floor(Math.random()*height.value +1);
+    let x = Math.floor((Math.random()*(!isNaN(width.valueAsNumber)?width.valueAsNumber: 250))+1);
+    let y = Math.floor((Math.random()*(!isNaN(height.valueAsNumber)?height.valueAsNumber: 250))+1);
     click.style.marginTop = `${y}px`;
     click.style.marginLeft = `${x}px`;
     liczba = liczba + 1;
