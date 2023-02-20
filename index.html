@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wkurzajka</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="main">
+        <div id="config">
+            <h2>Witaj w Human Benchmark!</h2>
+            <h3>Poniżej widnieją opcje konfigurowania Twojego indywidualnego miejsca treningu!</h3>
+            <p>Najpierw wybierz wielkość pola: </p>
+            Szerokość: <input id="width" type="number" min="100" max="1000" onchange="rozmiar()">px<br>
+            Wysokość: <input id="height" type="number" min="100" max="800" onchange="rozmiar()">px<br>
+            <p>Teraz wybierz kolor pola: </p>
+            <p>Kolor czerwony: 
+                <input type="range" id="red" min="0" max="255" value="127" onchange="faza()">
+            </p>
+            <p>Kolor zielony: 
+                <input type="range" id="green" min="0" max="255" value="127" onchange="faza()">
+            </p>
+            <p>Kolor niebieski: 
+                <input type="range" id="blue" min="0" max="255" value="127" onchange="faza()">
+            </p>
+            <button id="random" onclick="kolor()">Losuj kolory</button>
+        </div>
+        <div id="page">
+            <div id="box">
+                <div id="click" onmouseover="teleport()">
+                    0
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
